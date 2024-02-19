@@ -1,5 +1,6 @@
 theme = "terminimal"
-base_url = "http://shawn111.github.io/"
+base_url = "https://shawn111.github.io/"
+
 
 # Sass compilation is required
 compile_sass = true
