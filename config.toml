@@ -1,11 +1,12 @@
-baseURL = "http://shawn111.github.io/"
-languageCode = "en-US"
-defaultContentLanguage = "en"
+theme = "terminimal"
+base_url = "http://shawn111.github.io/"
 
-title = "Shawn - Coding and Fun"
-theme = "kiera"
-metaDataFormat = "yaml"
+# Sass compilation is required
+compile_sass = true
 
-[author]
-    name = "Shawn Wang"
-    github = "#shawn111"
+[extra]
+
+# Author name: when specified, modifies the default
+# copyright text. Apart from author, it will
+# contain current year and a link to the theme.
+author = "Shawn Wang"
