@@ -25,6 +25,8 @@ jobs:
     steps:
     - name: Checkout main
       uses: actions/checkout@v4
+    - name: Prepare change data
+      run: git clone https://github.com/shawn111/dotfiles.git; cd dotfiles; git diff HEAD^^^^^^..HEAD --stat */**/*.md >> ../content/about.md; cd ..
     - uses: taiki-e/install-action@zola
     - name: zola build
       run: zola build
