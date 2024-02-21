@@ -26,7 +26,11 @@ jobs:
     - name: Checkout main
       uses: actions/checkout@v4
     - name: Prepare change data
+      run: echo "## Recent udates of my dotfiles" >> content/about.md ; echo '```' >> content/about.md
+    - name: data from dotfiles
       run: git clone https://github.com/shawn111/dotfiles.git; cd dotfiles; git diff HEAD^^^^^^..HEAD --stat */**/*.md >> ../content/about.md; cd ..
+    - name: end of change data
+      run: echo '```' >> content/about.md
     - uses: taiki-e/install-action@zola
     - name: zola build
       run: zola build
